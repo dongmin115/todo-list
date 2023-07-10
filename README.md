@@ -13,8 +13,7 @@ $ docker-compose up -d
 ```
 
 # API 명세
-
-![스크린샷 2023-06-01 오후 10 12 50](https://github.com/sangminlee98/sample-server/assets/83197138/82f306a0-4c56-4d9b-a89d-c67a86ec352d)
+![스크린샷 2023-07-11 오전 4 21 15](https://github.com/sangminlee98/api-practice/assets/83197138/c6d8731b-346c-4bfc-9c0c-c0db3e5c3e9b)
 
 ## 1. getTodos
 
@@ -59,7 +58,7 @@ $ docker-compose up -d
 - Content-Type: `multipart/form-data`
 - Body:
   - `todoData: string`
-  - `file: File`
+  - `file?: File`
 
 ### Response
 
