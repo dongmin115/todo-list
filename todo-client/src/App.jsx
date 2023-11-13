@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import "./App.css";
+import MainBox from "./components/mainbox";
 
 function App() {
   const inputRef = useRef();
@@ -60,34 +61,35 @@ function App() {
   }, []);
 
   return (
-    <div className="container">
-      <form onSubmit={createTodo}>
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.currentTarget.value)}
-        />
-        <input ref={inputRef} type="file" onChange={onLoadFile} />
-        <button onClick={createTodo}>생성</button>
-      </form>
+    // <div className="container">
+    //   <form onSubmit={createTodo}>
+    //     <input
+    //       type="text"
+    //       value={input}
+    //       onChange={(e) => setInput(e.currentTarget.value)}
+    //     />
+    //     <input ref={inputRef} type="file" onChange={onLoadFile} />
+    //     <button onClick={createTodo}>생성</button>
+    //   </form>
 
-      <ul className="todoListWrapper">
-        {todos.map((todo) => (
-          <li key={todo.id} className="todoWrapper">
-            <input
-              type="checkbox"
-              checked={todo.done}
-              onChange={() => updateTodo(todo.id)}
-            />
-            {todo.thumbnail && (
-              <img className="thumbnail" src={todo.thumbnail} alt="thumbnail" />
-            )}
-            <span>{todo.title}</span>
-            <button onClick={() => deleteTodo(todo.id)}>삭제</button>
-          </li>
-        ))}
-      </ul>
-    </div>
+    //   <ul className="todoListWrapper">
+    //     {todos.map((todo) => (
+    //       <li key={todo.id} className="todoWrapper">
+    //         <input
+    //           type="checkbox"
+    //           checked={todo.done}
+    //           onChange={() => updateTodo(todo.id)}
+    //         />
+    //         {todo.thumbnail && (
+    //           <img className="thumbnail" src={todo.thumbnail} alt="thumbnail" />
+    //         )}
+    //         <span>{todo.title}</span>
+    //         <button onClick={() => deleteTodo(todo.id)}>삭제</button>
+    //       </li>
+    //     ))}
+    //   </ul>
+    // </div>
+    <MainBox/>
   );
 }
 
