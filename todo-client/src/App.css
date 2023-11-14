@@ -11,6 +11,9 @@ html,body{
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  border-radius: 5px;
+  border: 2px solid #60a5fa;
+  padding: 1rem;
 }
 
 .thumbnail {
