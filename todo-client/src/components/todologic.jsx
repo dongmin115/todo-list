@@ -4,7 +4,7 @@ import { faPen, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Todologic(){
-    const inputRef = useRef();
+  const inputRef = useRef();
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
   const [imageFile, setImageFile] = useState();
