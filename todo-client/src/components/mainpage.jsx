@@ -11,11 +11,18 @@ export default function Mainpage(){
     let [day,setDay] = useState(today);
     const currentMonth = date.getMonth() + 1;   //getMonth()함수는 0부터 시작하여 1월이 0이기 때문에 1을 더해주어야 현재 달의 값이 된다.
     let [month,setMonth] = useState(currentMonth);
+    var isClickable = true;
+    
 
-    const todoBox = document.getElementById('todoBox');
+    const onClickNextBtn = async () => {
 
-    const onClickNextBtn = () => {
-        
+        const todoBox = document.getElementById('todoBox')
+        if(!isClickable){
+            return;
+        }
+
+        isClickable = false;
+
         day += 1;
 
         if(day === 31){
@@ -24,13 +31,15 @@ export default function Mainpage(){
         }
         if(month > 12){
             month = 1;
-        } 
-        
+        };
         todoBox.classList.add('animate-blink');
-        setTimeout(()=>{
-            todoBox.classList.remove('animate-blink');
+
+        setTimeout( ()=>{
             setMonth(month);
             setDay(day);
+            todoBox.classList.remove('animate-blink')
+            
+            isClickable = true;
         }, 1000);
 
     }

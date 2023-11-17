@@ -10,7 +10,7 @@ module.exports = {
         }
       },
       animation: {
-        'blink' : 'blink 1s ease-in-out infinite',  //홈페이지랑 양식다름 홈페이지는 blink라고만 써도된다고하는데 실제로는 'blink'로 작성해야적용됨
+        blink : 'blink 1s ease-in-out infinite',  //홈페이지랑 양식다름 홈페이지는 blink라고만 써도된다고하는데 실제로는 'blink'로 작성해야적용됨
       }
     },
   },
