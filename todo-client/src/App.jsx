@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Mainpage from "./components/mainpage";
+import Todologic from "./components/todologic"
 
 function App() {
   
 
   return (
     <Routes>
-      <Route path="/" element={<Mainpage/>}/>
+      <Route path="/" element={<Todologic/>}/>
     </Routes>
   );
 }
