@@ -104,6 +104,7 @@ export default function Todologic(){
   useEffect(() => {
     getTodos();
   }, []);
+
     return (
       <div className="flex flex-col w-full h-full items-center">
         <div className="basis-1/4 text-black text-center text-2xl  font-normalfont-['Inter'] w-1/3 py-16">What to do today?</div>
@@ -148,7 +149,7 @@ export default function Todologic(){
     </div>
     </div>
     </div>
-        <SideBar/>
+        <SideBar todos={todos}/>
     </div>
     )
 }
